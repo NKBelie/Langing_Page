@@ -1,122 +1,150 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      <nav className="navbar">
+        <h2>Product</h2>
+
+        <div className="links">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+
+        <button>Get Started</button>
+      </nav>
+      <section id="home" className="hero">
+        <div className="hero-content">
+          <p className="tag">
+            Smart Manufacturing, Better Future
           </p>
+
+          <h1>
+            The Future of Manufacturing
+            <br />
+            with Latest Technology
+          </h1>
+
+          <p className="subtitle">
+            Smart factory solutions powering efficiency,
+            quality and growth.
+          </p>
+
+          <button>Get Started</button>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+
+        <div className="stats">
+          <div className="box">
+            <h2>100+</h2>
+            <p>Manufacturing Solutions</p>
+          </div>
+
+          <div className="box">
+            <h2>1951+</h2>
+            <p>Global Companies</p>
+          </div>
+
+          <div className="box">
+            <h2>6+</h2>
+            <p>Years Experience</p>
+          </div>
+
+          <div className="box dark">
+            <h2>AI</h2>
+            <p>Data Driven Platform</p>
+          </div>
+        </div>
       </section>
+      <section id="features" className="features">
+        <h2>Efficient Manufacturing Services</h2>
 
-      <div className="ticks"></div>
+        <div className="grid">
+          <div className="card">
+            <h3>Production</h3>
+            <p>Streamlined production process.</p>
+          </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+          <div className="card">
+            <h3>Custom Manufacturing</h3>
+            <p>Solutions tailored to your needs.</p>
+          </div>
+
+          <div className="card">
+            <h3>Quality Control</h3>
+            <p>Advanced inspection and assurance.</p>
+          </div>
+
+          <div className="card">
+            <h3>Technology</h3>
+            <p>Latest innovations for efficiency.</p>
+          </div>
+
+          <div className="card">
+            <h3>Logistics</h3>
+            <p>Reliable packaging and delivery.</p>
+          </div>
+
+          <div className="card">
+            <h3>Consulting</h3>
+            <p>Expert support and maintenance.</p>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="pricing" className="pricing">
+        <h2>Choose Your Plan</h2>
+
+        <div className="plans">
+          <div className="plan">
+            <h3>Starter</h3>
+            <h1>$99</h1>
+            <p>Basic features for small teams.</p>
+          </div>
+
+          <div className="plan active">
+            <h3>Professional</h3>
+            <h1>$199</h1>
+            <p>Advanced features for growth.</p>
+          </div>
+
+          <div className="plan">
+            <h3>Enterprise</h3>
+            <h1>$399</h1>
+            <p>Full manufacturing solution.</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="contact">
+        <h2>Contact Us</h2>
+
+        <form>
+          <input
+            type="text"
+            placeholder="Your Name"
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+          />
+
+          <textarea
+            rows="5"
+            placeholder="Message"
+          ></textarea>
+
+          <button>Send Message</button>
+        </form>
+      </section>
+      <footer>
+        <h3>Product</h3>
+        <p>
+          Smart manufacturing solutions that drive
+          efficiency and growth.
+        </p>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
